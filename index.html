@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sijabu | Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sijabu | Developer Portfolio</title>
 
     <style>
         html {
@@ -23,6 +24,7 @@
             color: white;
             padding: 15px;
             text-align: center;
+            z-index: 1000;
         }
 
         .nav a {
@@ -34,18 +36,19 @@
 
         /* HEADER */
         .header {
-            background: #2c3e50;
+            background: linear-gradient(135deg, #2c3e50, #1f2a38);
             color: white;
             text-align: center;
-            padding: 60px 20px;
+            padding: 70px 20px;
         }
 
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
-            border: 3px solid white;
+            border: 4px solid white;
             margin-bottom: 15px;
+            object-fit: cover;
         }
 
         .btn {
@@ -56,6 +59,11 @@
             color: white;
             text-decoration: none;
             border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
         }
 
         .btn.secondary {
@@ -66,8 +74,9 @@
         .section {
             max-width: 900px;
             margin: auto;
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
+            animation: fadeIn 0.8s ease-in-out;
         }
 
         /* CARDS */
@@ -82,13 +91,13 @@
             background: white;
             width: 250px;
             padding: 20px;
-            border-radius: 10px;
+            border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
             transition: 0.3s;
         }
 
         .card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-10px);
         }
 
         /* FOOTER */
@@ -106,10 +115,37 @@
             right: 20px;
             background: #27ae60;
             color: white;
-            padding: 10px 15px;
+            padding: 12px 15px;
             border-radius: 50%;
             text-decoration: none;
             font-weight: bold;
+        }
+
+        /* ANIMATION */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 📱 MOBILE FIX */
+        @media (max-width: 600px) {
+            .card {
+                width: 90%;
+            }
+
+            .nav {
+                font-size: 14px;
+            }
+
+            .header {
+                padding: 50px 15px;
+            }
         }
     </style>
 </head>
@@ -129,7 +165,7 @@
         <img class="profile-img" src="me.jpg" alt="Profile">
 
         <h1>Hi, I'm Sijabu 👋</h1>
-        <p>Junior Web Developer | Building Real Projects</p>
+        <p>Junior Web Developer | HTML • CSS • JavaScript</p>
 
         <a class="btn" href="mailto:sijabu@gmail.com">Hire Me</a>
         <a class="btn secondary" href="cv.pdf" download>Download CV</a>
@@ -139,7 +175,7 @@
     <div id="about" class="section">
         <h2>About Me</h2>
         <p>
-            I am a motivated beginner developer from South Africa learning to build modern websites and applications.
+            I am a motivated beginner developer from South Africa building real websites and learning modern web development.
         </p>
     </div>
 
@@ -148,8 +184,8 @@
         <h2>Skills</h2>
         <div class="grid">
             <div class="card">HTML5</div>
-            <div class="card">CSS</div>
-            <div class="card">JavaScript</div>
+            <div class="card">CSS3</div>
+            <div class="card">JavaScript Basics</div>
         </div>
     </div>
 
@@ -167,10 +203,10 @@
     <div id="contact" class="footer">
         <h2>Contact</h2>
         <p>Email: sijabu@gmail.com</p>
-        <p>Available for internships, freelance work, and junior roles</p>
+        <p>Available for internships, freelance work & junior roles</p>
     </div>
 
-    <!-- BACK TO TOP BUTTON -->
+    <!-- BACK TO TOP -->
     <a href="#" class="top-btn">↑</a>
 
 </body>
